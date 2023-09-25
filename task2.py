@@ -18,8 +18,8 @@ def SokrDr(x,y):
     return x//NOD(x,y), y//NOD(x,y)
 
     
-a,b = [int(x) for x in input().split('/')] #числитель и знаменатель дроби a/b
-c,d = [int(x) for x in input().split('/')] #числитель и знаменатель дроби c/d
+a,b = [int(x) for x in input("Введите первую дробь в виде a/b:  ").split('/')] #числитель и знаменатель дроби a/b
+c,d = [int(x) for x in input("Введите вторую дробь в виде a/b:  ").split('/')] #числитель и знаменатель дроби c/d
 
 sum_chisl,sum_znam = SokrDr(a*d+b*c,b*d) #числитель и знаменатель суммы дробей
 
