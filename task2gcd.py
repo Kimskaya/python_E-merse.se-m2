@@ -13,13 +13,12 @@ def SokrDr(x,y):
     return x//gcd(x,y), y//gcd(x,y)
 
     
-a,b = [int(x) for x in input().split('/')] #числитель и знаменатель дроби a/b
-c,d = [int(x) for x in input().split('/')] #числитель и знаменатель дроби c/d
+a,b = [int(x) for x in input("Введите первую дробь в виде a/b:  ").split('/')] #числитель и знаменатель дроби a/b
+c,d = [int(x) for x in input("Введите вторую дробь в виде a/b:  ").split('/')] #числитель и знаменатель дроби c/d
 
 sum_chisl,sum_znam = SokrDr(a*d+b*c,b*d) #числитель и знаменатель суммы дробей
 
 pr_chisl,pr_znam = SokrDr(a*c,b*d)       #числитель и знаменатель произведения дробей
-
 print('Вычисление без использования модуля fractions:')
 print(f'{a}/{b} + {c}/{d} = {sum_chisl}/{sum_znam}')
 print(f'{a}/{b} * {c}/{d} = {pr_chisl}/{pr_znam}')
